@@ -1,0 +1,8 @@
+{
+  "project_name": "My Plugin",
+  "module_name": "{{ cookiecutter.project_name.title().replace(' ', '') }}",
+  "project_slug": "{{ 'beets-' + cookiecutter.project_name.lower().replace(' ', '') }}",
+  "command": "{{ cookiecutter.project_name.lower().replace(' ', '') }}",
+  "author": "Anonymous",
+  "email": "name@example.com"
+}

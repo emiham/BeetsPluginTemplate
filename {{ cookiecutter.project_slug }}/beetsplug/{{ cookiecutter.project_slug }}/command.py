@@ -1,5 +1,5 @@
-#  Copyright: Copyright (c) 2020., <AUTHOR>
-#  Author: <AUTHOR> <EMAIL>
+#  Copyright: Copyright (c) 2020., {{ cookiecutter.author }}
+#  Author: {{ cookiecutter.author }} {{ cookiecutter.email }}
 #  License: See LICENSE.txt
 
 from optparse import OptionParser
@@ -8,10 +8,10 @@ from beets.library import Library
 from beets.ui import Subcommand, decargs
 from beets.util.confit import Subview
 
-from beetsplug.template import common
+from beetsplug.{{ cookiecutter.project_name }} import common
 
 
-class TemplateCommand(Subcommand):
+class {{ cookiecutter.module_name }}(Subcommand):
     config: Subview = None
     lib: Library = None
     query = None
@@ -31,7 +31,7 @@ class TemplateCommand(Subcommand):
             help=u'show plugin version'
         )
 
-        super(TemplateCommand, self).__init__(
+        super({{ cookiecutter.module_name }}, self).__init__(
             parser=self.parser,
             name=common.plg_ns['__PLUGIN_NAME__'],
             aliases=[common.plg_ns['__PLUGIN_ALIAS__']] if

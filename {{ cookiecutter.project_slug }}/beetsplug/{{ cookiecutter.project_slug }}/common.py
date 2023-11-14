@@ -1,5 +1,5 @@
-#  Copyright: Copyright (c) 2020., <AUTHOR>
-#  Author: <AUTHOR> <EMAIL>
+#  Copyright: Copyright (c) 2020., {{ cookiecutter.author }}
+#  Author: {{ cookiecutter.author }} {{ cookiecutter.email }}
 #  License: See LICENSE.txt
 
 import logging

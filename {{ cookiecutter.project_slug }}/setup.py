@@ -1,5 +1,5 @@
-#  Copyright: Copyright (c) 2020., <AUTHOR>
-#  Author: <AUTHOR> <EMAIL>
+#  Copyright: Copyright (c) 2020., {{ cookiecutter.author }}
+#  Author: {{ cookiecutter.author }} {{ cookiecutter.email }}
 #  License: See LICENSE.txt
 
 import pathlib
@@ -14,7 +14,7 @@ README = (HERE / "README.md").read_text()
 
 # Get values from the about file
 plg_ns = {}
-about_path = convert_path('beetsplug/template/about.py')
+about_path = convert_path('beetsplug/{{ cookiecutter.project_name }}/about.py')
 with open(about_path) as about_file:
     exec(about_file.read(), plg_ns)
 
@@ -32,7 +32,7 @@ setup(
 
     include_package_data=True,
     test_suite='test',
-    packages=['beetsplug.template'],
+    packages=['beetsplug.{{ cookiecutter.project_name }}'],
 
     python_requires='>=3.6',
 
